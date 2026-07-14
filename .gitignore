@@ -1,7 +1,6 @@
 
 # Playwright
 .env
-testData/*.pdf
 node_modules/
 /test-results/
 /playwright-report/
