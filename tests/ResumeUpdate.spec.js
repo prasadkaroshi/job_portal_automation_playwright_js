@@ -2,6 +2,7 @@ import {test, expect} from '@playwright/test';
 import {LoginPage} from '../pages/LoginPage';
 import {HomePage} from '../pages/HomePage';
 import {ProfilePage} from '../pages/ProfilePage';
+import { profile } from 'node:console';
 
 test('Update Resume', async ({page}) => {
     const loginPage = new LoginPage(page);
@@ -10,6 +11,7 @@ test('Update Resume', async ({page}) => {
     await loginPage.enterCredentialAndLogin();
     const homePage = new HomePage(page);
     await homePage.clickOnViewProfileBtn();
-    const profilePage = new ProfilePage(page);
-    await profilePage.uploadResume();
+    const profilepage = new ProfilePage(page);
+    await profilepage.uploadResume();
+    await profilepage.updateResumeHeadline();
 });
